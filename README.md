@@ -1,77 +1,67 @@
 # Boo The Blue Bob
 
-A 2D side-scrolling adventure game created with the Godot Engine. Join Boo on a quest through enchanting forests and mysterious villages!
+An endless auto-runner adventure game built with the Godot Engine. Help Boo jump over obstacles, collect coins, and reach the finish line!
 
 
 ---
 
 ## 📜 About The Game
 
-**Boo The Blue Bob** is a classic 2D side-scroller where players navigate through various levels, collect special items, and experience a simple story. This project was developed as an exploration of the Godot Engine's capabilities for creating engaging platformer games.
+**Boo The Blue Bob** is a fast-paced 2D platformer that challenges your reflexes. [cite_start]In this game, the player character moves forward automatically, and your goal is to time your jumps perfectly to avoid obstacles and collect coins[cite: 10, 13]. [cite_start]The game was built using Godot and features procedural obstacle generation, dynamic UI, and a parallax background for a sense of depth[cite: 8, 16, 20, 25].
 
 ---
 
 ## ✨ Features
 
-* **Classic 2D Platforming:** Simple and intuitive side-scrolling controls.
-* **Collectible System:** Search for and collect items hidden throughout the levels.
-* **Atmospheric Scenes:** Explore levels like the `SceneForest` with ambient background music.
-* **Simple UI:** Includes a main menu (`FirstScreen.tscn`) and other basic UI elements.
+* [cite_start]**Endless Auto-Runner Gameplay**: The character moves forward automatically, so you can focus on the action[cite: 10].
+* **Simple One-Button Controls**: Easy to learn, difficult to master. [cite_start]The only control you need is jump[cite: 13]!
+* [cite_start]**Procedural Obstacle Spawning**: The game generates `redBlob` obstacles as you play, making each run unique[cite: 8].
+* [cite_start]**Dynamic UI**: On-screen labels track your HP and collected coins in real-time as you play[cite: 16, 25].
+* [cite_start]**Parallax Background**: Multiple background layers scroll at different speeds, creating a beautiful and immersive sense of depth[cite: 20].
 
 ---
 
-## 🎮 Getting Started
+## 🎮 How to Play
+
+Based on the provided game scripts, this is an **auto-runner**. The character moves forward on their own.
+
+* [cite_start]Press **Enter** or **Space** (`ui_accept` action) on the title screen to start the run[cite: 10].
+* [cite_start]Press your **`jump`** key (configured in `Project > Project Settings > Input Map`, likely the **Space Bar**) to jump over obstacles[cite: 13].
+
+> **Note on Movement**: Your request mentioned `Arrow Keys` for movement. [cite_start]The current `Map.gd` script only implements forward auto-running and does not use left/right input[cite: 10]. To add player-controlled movement, the `_physics_process` function in the player's script would need to be modified to handle horizontal input.
+
+---
+
+## 🎯 Gameplay Objective
+
+* **Win Condition**: The main goal is to collect **3 coins**. [cite_start]Doing so will display the "Game Finished" screen[cite: 19].
+* **Lose Condition**: The game is over if you collide with an obstacle. [cite_start]This will immediately trigger the game over screen and pause the game[cite: 8].
+
+---
+
+## 🚀 Getting Started
 
 To run this project on your local machine, you'll need to have the Godot Engine installed.
 
 ### Prerequisites
 
-* **Godot Engine** (Version 3.x or 4.x recommended). You can download it from the [official Godot website](https://godotengine.org/).
+* **Godot Engine** (Version 4.x recommended). You can download it from the [official Godot website](https://godotengine.org/).
 
 ### Installation & Setup
 
-1.  **Clone the repository** to your local machine:
-    ```sh
-    git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
-    ```
+1.  **Clone the repository** to your local machine.
 2.  **Open the Godot Engine** project manager.
 3.  Click the **"Import"** button.
 4.  Navigate to the cloned project folder and select the `project.godot` file.
 5.  Once imported, select the project from the list and click **"Edit"**.
-6.  Inside the editor, press the **F5** key (or the "Play" button) to run the main scene and start the game.
-
----
-
-## 🕹️ How to Play
-
-* **Move Left/Right:** `←` / `→` (Arrow Keys)
-* **Jump:** `Space Bar`
-* *(Add any other specific controls here, like 'Attack' or 'Interact').*
+6.  Inside the editor, press the **F5** key (or the "Play" button) to run the main scene.
 
 ---
 
 ## 📁 Project Structure
 
-The project is organized into several key directories:
-
-* **/Scenes**: Contains all the main game levels and character scenes (`.tscn` files).
-* **/Script**: Holds all the GDScript (`.gd`) files that control the game logic, including `game_manager.gd` and `Collectibles.gd`.
-* **/SideScroller**: Core scripts and scenes related to the side-scrolling player controller and mechanics.
-* **/sprites** & **/tileset**: All 2D visual assets, including character sprites, environment tiles, and objects.
-* **/UI**: User interface elements and menu scenes.
-* **Audio Files**: Root directory contains sound effects and music tracks like `medieval_village_atmosphere.mp3` and `village_theme.mp3`.
-
----
-
-## 🙏 Credits & Assets
-
-This game was made possible by using assets from various creators.
-
-* **Music:**
-    * `star wars style battle music 148647.mp3` - [Link to Source/Creator]
-    * `medieval_village_atmosphere_79282.mp3` - [Link to Source/Creator]
-    * `AMBForest_Foret_ID_0100_LS.mp3` - [Link to Source/Creator]
-* **Graphics:**
-    * Sprites and Tilesets from [Link to Source/Creator].
-
-*This README was generated with help from Gemini.*
+* [cite_start]**/Scenes**: Contains all the main game levels, obstacles (`redBlob.tscn`), and character scenes (`Player.tscn`)[cite: 1, 8].
+* [cite_start]**/Script**: Holds all the GDScript (`.gd`) files that control the game logic, including `Map.gd` (main loop) and `Player.gd` (player controller)[cite: 8, 11].
+* [cite_start]**/SideScroller**: Contains core assets related to the player, including sprites like `Madeline_Idle.png`[cite: 1].
+* [cite_start]**/Images**: Contains environmental assets like the ground sprite (`G.png`) and parallax background layers[cite: 7, 20].
+* [cite_start]**UI Scripts**: `GameOver.gd`, `GameFinished.gd`, `Label.gd`, and `Label2.gd` control the various text labels on the screen[cite: 4, 17, 14, 23].
