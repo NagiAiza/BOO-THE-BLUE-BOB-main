@@ -1,67 +1,69 @@
-# Boo The Blue Bob
+Of course. Here is the complete README for your project, with the formatting cleaned up as you requested.
 
-An endless auto-runner adventure game built with the Godot Engine. Help Boo jump over obstacles, collect coins, and reach the finish line!
+Boo The Blue Bob
+A multi-genre adventure game built with the Godot Engine. Explore a charming world, engage in dialogue-driven quests, and conquer challenging side-scrolling platformer levels.
+
+📜 About The Game
+Boo The Blue Bob is an ambitious 2D adventure that blends multiple gameplay styles. Players will begin in a top-down world, exploring areas, collecting items, and interacting with a cast of characters like a mysterious sorcerer and a cynical thief. The game features a complete dialogue system with animated text, driving a story with simple quests. After proving your worth by collecting enough gems, you will unlock challenging side-scrolling platformer levels where your reflexes and combat skills will be put to the test.
+
+✨ Features
+Dual Gameplay Modes: Seamlessly transition between top-down exploration and classic side-scrolling platforming.
+
+Interactive Dialogue System: A powerful, centralized dialogue manager delivers conversations with an animated "typewriter" effect.
+
+Quest-Driven Progression: Engage with NPCs to solve simple quests, such as helping a thief to unlock a sealed door.
+
+NPC Follower Mechanic: Convince the Thief to help you, and he will follow you on your journey, with animations matching your movements.
+
+Side-Scrolling Action: In the platforming levels, you have full control over your character's movement and the ability to jump.
+
+Health & Collectibles: Manage your health as you navigate dangerous traps and collect coins to complete the platforming stages.
+
+Dynamic Bounded Camera: A smart camera smoothly follows the player while always staying within the boundaries of the level.
+
+Full Menu & Pause System: The game includes a main menu, in-game menus, and a pause function for the exploration scenes.
+
+📖 Gameplay Overview
+The adventure unfolds across different interconnected scenes:
+
+Explore the World: You begin in a top-down scene like SceneVille. You control Boo using 4-directional movement to explore the map.
+
+Talk to Characters: You will encounter characters like the Sorcerer and the Thief. By entering their area, you can initiate conversations managed by the dialogue system.
+
+Solve Quests: Progress by completing tasks. For example, interacting with the Thief can set a voleur_taken flag, which allows the Thief to follow you and lets you open a locked door.
+
+Collect Items: Search the exploration maps to find and collect gems.
+
+Unlock New Levels: Once you have collected at least 3 gems, you can access the entrance to the side-scrolling combat level.
+
+Conquer the Platformer: In the combat level, the gameplay shifts. You must navigate the level, avoid traps, collect 3 coins, and manage your health to win.
+
+🕹️ Controls
+
+| Action            | Key                        | Gameplay Mode            |
+| ----------------- | -------------------------- | ------------------------ |
+| **Movement** | `Arrow Keys` (Up/Down/Left/Right) | Top-Down Exploration |
+| **Movement** | `Left / Right Arrow Keys` | Side-Scrolling Platforming |
+| **Jump** | `ui_accept` (Space/Enter)  | Side-Scrolling Platforming |
+| **Advance Text** | `text` (Custom Action) | Dialogue |
+| **Pause Game** | `ui_cancel` (Escape) | Top-Down Exploration |
 
 
----
 
-## 📜 About The Game
-
-**Boo The Blue Bob** is a fast-paced 2D platformer that challenges your reflexes. [cite_start]In this game, the player character moves forward automatically, and your goal is to time your jumps perfectly to avoid obstacles and collect coins[cite: 10, 13]. [cite_start]The game was built using Godot and features procedural obstacle generation, dynamic UI, and a parallax background for a sense of depth[cite: 8, 16, 20, 25].
-
----
-
-## ✨ Features
-
-* [cite_start]**Endless Auto-Runner Gameplay**: The character moves forward automatically, so you can focus on the action[cite: 10].
-* **Simple One-Button Controls**: Easy to learn, difficult to master. [cite_start]The only control you need is jump[cite: 13]!
-* [cite_start]**Procedural Obstacle Spawning**: The game generates `redBlob` obstacles as you play, making each run unique[cite: 8].
-* [cite_start]**Dynamic UI**: On-screen labels track your HP and collected coins in real-time as you play[cite: 16, 25].
-* [cite_start]**Parallax Background**: Multiple background layers scroll at different speeds, creating a beautiful and immersive sense of depth[cite: 20].
-
----
-
-## 🎮 How to Play
-
-Based on the provided game scripts, this is an **auto-runner**. The character moves forward on their own.
-
-* [cite_start]Press **Enter** or **Space** (`ui_accept` action) on the title screen to start the run[cite: 10].
-* [cite_start]Press your **`jump`** key (configured in `Project > Project Settings > Input Map`, likely the **Space Bar**) to jump over obstacles[cite: 13].
-
-> **Note on Movement**: Your request mentioned `Arrow Keys` for movement. [cite_start]The current `Map.gd` script only implements forward auto-running and does not use left/right input[cite: 10]. To add player-controlled movement, the `_physics_process` function in the player's script would need to be modified to handle horizontal input.
-
----
-
-## 🎯 Gameplay Objective
-
-* **Win Condition**: The main goal is to collect **3 coins**. [cite_start]Doing so will display the "Game Finished" screen[cite: 19].
-* **Lose Condition**: The game is over if you collide with an obstacle. [cite_start]This will immediately trigger the game over screen and pause the game[cite: 8].
-
----
-
-## 🚀 Getting Started
-
+Exporter vers Sheets
+🚀 Getting Started
 To run this project on your local machine, you'll need to have the Godot Engine installed.
 
-### Prerequisites
+Prerequisites
+Godot Engine (Version 4.x recommended). You can download it from the official Godot website.
 
-* **Godot Engine** (Version 4.x recommended). You can download it from the [official Godot website](https://godotengine.org/).
+Installation & Setup
+Clone the repository to your local machine.
 
-### Installation & Setup
+Open the Godot Engine project manager.
 
-1.  **Clone the repository** to your local machine.
-2.  **Open the Godot Engine** project manager.
-3.  Click the **"Import"** button.
-4.  Navigate to the cloned project folder and select the `project.godot` file.
-5.  Once imported, select the project from the list and click **"Edit"**.
-6.  Inside the editor, press the **F5** key (or the "Play" button) to run the main scene.
+Click the "Import" button.
 
----
+Navigate to the cloned project folder and select the project.godot file.
 
-## 📁 Project Structure
-
-* [cite_start]**/Scenes**: Contains all the main game levels, obstacles (`redBlob.tscn`), and character scenes (`Player.tscn`)[cite: 1, 8].
-* [cite_start]**/Script**: Holds all the GDScript (`.gd`) files that control the game logic, including `Map.gd` (main loop) and `Player.gd` (player controller)[cite: 8, 11].
-* [cite_start]**/SideScroller**: Contains core assets related to the player, including sprites like `Madeline_Idle.png`[cite: 1].
-* [cite_start]**/Images**: Contains environmental assets like the ground sprite (`G.png`) and parallax background layers[cite: 7, 20].
-* [cite_start]**UI Scripts**: `GameOver.gd`, `GameFinished.gd`, `Label.gd`, and `Label2.gd` control the various text labels on the screen[cite: 4, 17, 14, 23].
+Once imported, open the project and run the main scene (likely Menu1.tscn or SceneVille.tscn).
